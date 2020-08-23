@@ -11,7 +11,7 @@ import Foundation
 struct CalculatorBrain{
     
     static var shared = CalculatorBrain()
-    var BMI:Float!
+    var BMI:Float?
     
     mutating func calculateBMI(height: Float,weight: Float)
     {
@@ -20,7 +20,7 @@ struct CalculatorBrain{
     
     func getCalculatedBMI() -> String
     {
-       return String(format: "%.2f", BMI)
+        return String(format: "%.2f", BMI ?? 0.0)
     }
     
     
